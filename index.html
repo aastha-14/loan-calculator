@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+  <title>Loan Calculator</title>
+</head>
+<body style="background-color:#000;">
+  <div class="container valign-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-content center-align">
+            <h5 class="card-title" style="font-weight:bold;">Loan Calculator</h5>
+              <div class="row">
+                <form id="loan-form">
+                  <div class="input-field col s10">
+                    <i class="material-icons prefix">attach_money</i>
+                    <input type="number" name="amount" id="amount" class="validate" placeholder="Loan Amount">
+                  </div>
+                  <div class="input-field col s10">
+                    <i class="material-icons prefix">autorenew</i>
+                    <input type="number" name="amount" id="interest" class="validate" placeholder="Interest">
+                  </div>
+                  <div class="input-field col s10">
+                    <i class="material-icons prefix">timer</i>
+                    <input type="number" name="years" id="years" class="validate" placeholder="Loan Term(Years)">
+                  </div>
+                  <div class="input-field col s10">
+                    <input type="submit" value="Calculate" class='btn waves-effect waves-light white-text #1f2123 grey'>
+                    <input type="reset" value="Clear" class='btn waves-effect waves-light white-text #1f2123 grey'>
+                  </div>
+                </form>
+              </div>
+              <div id="loading">
+                <img src="image1.gif" alt="Laoding...">
+              </div>
+          </div>
+
+          <div class="card-action" id="results">
+            <h5>Result</h5>
+            <div class="row">
+              <form>
+                <div class="input-field col s10">
+                  <div class="col s6">Monthly Payment</div>
+                  <input type="number" name="monthly" id="monthly-payment" class="validate col s6" disabled>
+                </div>
+                <div class="input-field col s10">
+                  <div class="col s6">Total Payment</div>
+                  <input type="number" name="total" id="total-payment" class="validate col s6" disabled>
+                </div>
+                <div class="input-field col s10">
+                  <span class="col s6">Total Interest</span>
+                  <input type="number" name="interest" id="total-interest" class="validate col s6" disabled>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
