@@ -45,6 +45,7 @@ function error(err){
   const heading = document.querySelector('.card-title');
   errDiv.className = 'error';
   errDiv.style.color = 'red';
+  errDiv.style.border = '1px solid red';
   errDiv.appendChild(document.createTextNode(err));
   card.insertBefore(errDiv, heading);
 
